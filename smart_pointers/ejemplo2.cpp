@@ -1,16 +1,17 @@
 #include <iostream>
+#include <memory>
 
 using namespace std;
 
 void my_func()
 {
-    int* valuePtr = new int(15);
+    std::unique_ptr<int> valuePtr(new int(15));
     int x = 45;
     if (x == 45) {
         //delete valuePtr;
-        return;   // here we have a memory leak, valuePtr is not deleted
+        return;   // no memory leak anymore
     }
-    delete valuePtr;
+    return;
 }
 
 int main()
