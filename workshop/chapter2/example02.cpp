@@ -6,10 +6,9 @@ using namespace std;
 int main()
 {
     int myVector[] {0, 1, 2, 3, 4};
-    
-    for (int i = 0; i < myVector.size(); ++i)
+    for (int currentValue : myVector)
     {
-        int currentValue = myVector[i];
         std::cout << "\n" << currentValue;
     }
+
 }
