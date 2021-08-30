@@ -16,6 +16,7 @@ int main()
     std::cout << "===" << std::endl;
     std::cout << "myPointer: " << myPointer << std::endl;
     std::cout << "&myPointer: " << &myPointer << std::endl;
+    std::cout << "*myPointer: " << *myPointer << std::endl;
 
     // int dif_addr = int(&myPointer) - int(myPointer);
     // std::cout << "&myPointer: " << dif_addr << std::endl;
