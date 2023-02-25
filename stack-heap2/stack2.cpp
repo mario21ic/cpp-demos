@@ -1,4 +1,12 @@
 #include <iostream>
+// Linux
+#include <unistd.h>
+
+
+using namespace std;
+
+
+
 
 class Cube
 {
@@ -32,6 +40,16 @@ int main() {
     Cube *c = CreateCube();
     std::cout << "c: " << c << std::endl;
     std::cout << "&c: " << &c << std::endl;
+    // to avoid memory leaks
+    //delete c;
+    //c = nullptr;
+    
+    // Example of memory leaks
+    int x;
+    if(x == 0)
+    {
+        std::cout << "X is zero" << std::endl;
+    }
 
     double r = c->getVolume();
     std::cout << "r: " << r << std::endl;
@@ -40,6 +58,13 @@ int main() {
     double v = c->getSurfaceArea();
     std::cout << "v: " << v << std::endl;
     std::cout << "&v: " << &v << std::endl;
+
+    // 60 seconds
+    /*
+    std::cout << "sleep 60" << std::endl;
+    sleep(60);
+    std::cout << "bye" << std::endl;
+    */
 
     return 0;
 }

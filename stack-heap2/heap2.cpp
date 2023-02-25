@@ -26,7 +26,7 @@ Cube *CreateCubeOnHeap() {
 }
 
 int main() {
-    Cube * cube = CreateCubeOnHeap();
+    Cube *cube = CreateCubeOnHeap();
     double v = cube->getVolume();
 
     // to avoid memory leaks

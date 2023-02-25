@@ -7,7 +7,7 @@ g++ stack2.cpp && size a.out && ./a.out
 
 Check memory leaks:
 ```
-valgrind --leak-check=full -s ./a.out
+valgrind --leak-check=full --tool=memcheck --leak-check=yes --track-origins=yes -s ./a.out
 ```
 
 Example of avoiding memory leaks:
