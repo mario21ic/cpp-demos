@@ -6,6 +6,7 @@ int main() {
 
   char foo[] = "This is some text from proc-1";
   printf("foo value: %s\n", foo);
+  printf("foo address: %p\n", &foo);
 
   printf("Now execute\n");
   printf("  sudo ./proc-2  %d  %lx  %lu\n", getpid(), (long unsigned int) foo, strlen(foo)+1);
